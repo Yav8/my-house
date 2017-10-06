@@ -16,7 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle field;
-
+    private Person person;
     /**
      * Constructor for objects of class Picture
      */
@@ -58,10 +58,16 @@ public class Picture
         
         sun = new Circle();
         sun.changeColor("yellow");
-        sun.moveHorizontal(100);
+        sun.moveHorizontal(150);
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
+        
+        person = new Person();
+        person.changeColor("black");
+        person.moveHorizontal(-200);
+        person.moveVertical(20);
+        person.makeVisible();
     }
 
     /**
@@ -98,6 +104,7 @@ public class Picture
     public void moveSun()
     {
         sun.slowMoveVertical(100);
+        person.slowMoveHorizontal(100);
     }
     
 }
