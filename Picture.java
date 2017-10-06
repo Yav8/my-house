@@ -91,4 +91,13 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
+    
+    /**
+     * Change this picture to move sun
+     */
+    public void moveSun()
+    {
+        sun.slowMoveVertical(100);
+    }
+    
 }
